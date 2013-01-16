@@ -464,18 +464,17 @@
               = preserve do
                 :escaped
                   $('#searchable').multiSelect({
-                    selectableHeader: "<input type='text' id='search' autocomplete='off' placeholder='try "elem 2"'>"
+                    selectableHeader: "<input type='text' id='search' autocomplete='off' placeholder='try \"elem 2\"'>"
                   });
 
-                  $('#search').quicksearch(
+                  //$('#search').quicksearch(
                     $('#search').quicksearch($('.ms-elem-selectable', '#ms-searchable' )).on('keydown', function(e){
                       if (e.keyCode == 40){
                         $(this).trigger('focusout');
                         $('#searchable').focus();
                         return false;
                       }
-                    }
-                  );
+                    });
         / .row
         /   .span12
         /     %h3 Ajax
